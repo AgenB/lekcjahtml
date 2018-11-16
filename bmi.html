@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Stronka</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                text-align: center;
+                color: deeppink;
+                font-family: "Comic Sans MS", cursive;
+                font-style: italic;
+                font-size: 30pt;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var masa = parseFloat(prompt("Podaj twoją wagę w kg:"));
+            var wzrost = parseFloat(prompt("Podaj twój wzrost w metrach:"));
+            var bmi = masa / (wzrost * wzrost);
+            var text;
+            switch(true) {
+                case (bmi < 16):
+                    text = "wygłodzenie";
+                    break;
+                case (bmi >= 16.0 && bmi < 17.0):
+                    text = "wychudzenie";
+                    break;
+                case (bmi >= 17.0 && bmi < 18.5):
+                    text = "niedowaga";
+                    break;
+                case (bmi >= 18.5 && bmi < 25.0):
+                    text = "prawidłowa";
+                    break;
+                case (bmi >= 25.0 && bmi < 30.0):
+                    text = "madwaga";
+                    break;
+                case (bmi >= 30.0 && bmi < 35.0):
+                    text = "otyłość (I stopień)";
+                    break;
+                case (bmi >= 35.0 && bmi < 40.0):
+                    text = "otyłość kliniczna (II stopień)";
+                    break;
+                case (bmi >= 40.0):
+                    text = "otyłość skrajna (III stopień)";
+                    break;
+            }
+            document.write("Twoje BMI: " + bmi.toFixed(1) + "<br/>" + text);
+        </script>
+    </body>
+</html>

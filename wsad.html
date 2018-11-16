@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Stronka</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                text-align: center;
+                color: deeppink;
+                font-family: "Comic Sans MS", cursive;
+                font-style: italic;
+                font-size: 30pt;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var kierunek;
+            do {
+                kierunek = prompt('W - Góra\nS - Dół\nA - Lewo\nD - Prawo\nK - Koniec');
+                switch (kierunek) {
+                    case 'w':
+                        document.write('↑<br>');
+                        break;
+                    case 's':
+                        document.write('↓<br>');
+                        break;
+                    case 'a':
+                        document.write('←<br>');
+                        break;
+                    case 'd':
+                        document.write('→<br>');
+                        break;
+                    default:
+                }
+            }
+            while (kierunek != 'k');
+        </script>
+    </body>
+</html>

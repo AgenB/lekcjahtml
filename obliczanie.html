@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Stronka</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                text-align: center;
+                color: deeppink;
+                font-family: "Comic Sans MS", cursive;
+                font-style: italic;
+                font-size: 30pt;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            while (true) {
+                var a = parseFloat(prompt("Podaj a:"));
+                if (isNaN(a) || a <= 0) alert("To nie jest liczba dodatnia!");
+                else break;
+            };
+            while (true) {
+                var b = parseFloat(prompt("Podaj b:"));
+                if (isNaN(b) || a <= 0) alert("To nie jest liczba dodatnia!");
+                else break;
+            };
+            while (true) {
+                var c = parseFloat(prompt("Podaj c:"));
+                if (isNaN(c) || a <= 0) alert("To nie jest liczba dodatnia!");
+                else break;
+            }
+            var d = Math.sqrt(a * a + c * c);
+            document.write("Przekątna: " + Math.sqrt(b * b + d * d).toFixed(1) + "<br/>Objętość: " + a * b * c + "<br/>Pole: " + 2 * (a * b + b * c + a * c));
+        </script>
+    </body>
+</html>

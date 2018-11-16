@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Stronka</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                text-align: center;
+                color: deeppink;
+                font-family: "Comic Sans MS", cursive;
+                font-style: bold;
+                font-size: 30pt;
+            }
+        </style>
+        <script>
+            function suma() {
+                var s = 0;
+                for(var i = 0; i < arguments.length; i++) {
+                    s += arguments[i];
+                };
+                return s;
+            }
+            function max() {
+                if(arguments.length == 0) {
+                    return undefined;
+                }
+                var m = arguments[0];
+                for(var i = 0; i < arguments.length; i++) {
+                    if(arguments[i] > m) {
+                        m = arguments[i];
+                    }
+                }
+                return m;
+            }
+            function nwd(a, b) {
+                while(b) {
+                    var c = a % b;
+                    a = b;
+                    b = c;
+                }
+                return a;
+            }
+            function nwdmult(a, b) {
+                var x = nwd(a, b);
+                for(var i = 2; i < arguments.length; i++) {
+                    x = nwd(x, arguments[i]);
+                }
+                return x;
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write(suma(1, 2, 5, 5, 7) + "<br>");
+            document.write(max(3, -5, 11, 7, 9, 2) + "<br>");
+            document.write(max() + "<br>");
+            document.write(nwd(2, 4) + "<br>");
+            document.write(nwdmult(60, 25, 20, 10));
+        </script>
+    </body>
+</html>

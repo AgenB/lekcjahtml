@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Stronka</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                text-align: center;
+                color: deeppink;
+                font-family: "Comic Sans MS", cursive;
+                font-style: bold;
+                font-size: 30pt;
+            }
+        </style>
+        <script>
+        </script>
+    </head>
+    <body>
+        <script>
+            var ile = prompt("Ile liczb?");
+            var tab = new Array(ile);
+            for(var i = 0; i < ile; i++) {
+                tab[i] = prompt("Podaj " + (i + 1) + " liczbę");
+            }
+            for(var i = ile - 1; i >= 0; i--) {
+                document.write(tab[i] + ", ");
+            }
+        </script>
+    </body>
+</html>
