@@ -6,9 +6,10 @@
             body {
                 text-align: center;
                 color: deeppink;
-                font-family: "Comic Sans MS", cursive;
+                font-family: "Ubuntu Mono", cursive;
                 font-style: bold;
-                font-size: 30pt;
+                font-size: 14pt;
+
             }
         </style>
         <script>
@@ -16,12 +17,7 @@
     </head>
     <body>
         <script>
-            var s = "Ala ma kota";
-            var t = s.split(" ");
-            for(var i = 0; i < t.length; i++) {
-                t[i] = t[i].slice(0,1).toUpperCase();
-            }
-            document.write(t.join(""));
+            document.write("Korzystasz z: "+navigator["userAgent"]+"<br>Wymiary: "+window["innerWidth"]+" x "+window["innerHeight"]+"<br>");
         </script>
     </body>
 </html>
