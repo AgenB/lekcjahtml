@@ -16,14 +16,12 @@
     </head>
     <body>
         <script>
-            var ile = prompt("Ile liczb?");
-            var tab = new Array(ile);
-            for(var i = 0; i < ile; i++) {
-                tab[i] = prompt("Podaj " + (i + 1) + " liczbę");
+            var s = "Ala ma kota";
+            var t = s.split(" ");
+            for(var i = 0; i < t.length; i++) {
+                t[i] = t[i].slice(0,1).toUpperCase();
             }
-            for(var i = ile - 1; i >= 0; i--) {
-                document.write(tab[i] + ", ");
-            }
+            document.write(t.join(""));
         </script>
     </body>
 </html>
