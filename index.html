@@ -1,34 +1,38 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Stronka</title>
-        <meta charset="UTF-8">
-        <style>
-            body {
-                text-align: center;
-                color: deeppink;
-                font-family: "Ubuntu Mono", cursive;
-                font-style: bold;
-                font-size: 14pt;
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+</head>
+<body>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <input type="text" id="c">
+    <input type="button" value="Uwtórz" id="create">
+</body>
+<script>
+    const triInputA = document.querySelector("#a");
+    const triInputB = document.querySelector("#b");
+    const triInputC = document.querySelector("#c");
+    const triCreate = document.querySelector("#create");
 
-            }
-        </style>
-    </head>
-    <body>
-        <form class="form">
-            <input type="text" class="inputName" pattern="[A-Z][A-Za-z]*"><br><br>
-            <input type="text" class="inputFamilyName" pattern="[A-Z][A-Za-z]*"><br><br>
-            <input type="text" class="inputPostCode" pattern="\d\d-\d\d\d"><br><br>
-            <input type="text" class="inputPESEL" pattern="\d{11}"><br><br>
-            <input type="text" class="inputEmail" pattern="[\w\d.]+@[\w\d.]+"><br><br>
-            <textarea class="inputArea"></textarea><br><br>
-            <input type="button" class="btn" value="Submit">
-        </form>
-    </body>
-    <script>
-        let s = "Ala ma    kota";
-        let tab = s.split(/\s+/);
-        for (i in tab) {
-            document.write(tab[i] + "<br>");
+    function Triangle(a, b, c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.perimeter = function() {
+            return this.a + this.b + this.c;
         }
-    </script>
+        this.area = function() {
+            let p = this.perimeter() / 2;
+            return Math.sqrt(p*(p-this.a)*(p-this.b)*(p-this.c));
+        }
+    }
+
+    triCreate.addEventListener("click")
+</script>
 </html>

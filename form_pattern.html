@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Stronka</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                text-align: center;
+                color: deeppink;
+                font-family: "Ubuntu Mono", cursive;
+                font-style: bold;
+                font-size: 14pt;
+
+            }
+        </style>
+    </head>
+    <body>
+        <form class="form">
+            <input type="text" class="inputName" pattern="[A-Z][A-Za-z]*"><br><br>
+            <input type="text" class="inputFamilyName" pattern="[A-Z][A-Za-z]*"><br><br>
+            <input type="text" class="inputPostCode" pattern="\d\d-\d\d\d"><br><br>
+            <input type="text" class="inputPESEL" pattern="\d{11}"><br><br>
+            <input type="text" class="inputEmail" pattern="[\w\d.]+@[\w\d.]+"><br><br>
+            <textarea class="inputArea"></textarea><br><br>
+            <input type="button" class="btn" value="Submit">
+        </form>
+    </body>
+    <script>
+        let s = "Ala ma    kota";
+        let tab = s.split(/\s+/);
+        for (i in tab) {
+            document.write(tab[i] + "<br>");
+        }
+
+        
+    </script>
+</html>

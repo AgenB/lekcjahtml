@@ -40,4 +40,9 @@ Zwykły tekst.
 <a href="http://kasiazki.wp.pl">O książkach na Wirtualnej Polsce.</a>
 <p title="kajko">Jakiś tekst, który powinien być żółty<a href="http://gry.onet.pl">Gry na onecie.</a></p>
 </body>
+<script>
+    document.body.childNodes.forEach(function(el) {
+        console.log(el.nodeName);
+    });
+</script>
 </html>
