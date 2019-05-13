@@ -15,17 +15,15 @@
     let timeDiv = document.querySelector(".time");
     let timeButton = document.querySelector(".button");
 
-    let t;
-
     function loop() {
         let time = new Date();
         timeDiv.innerText = time.toLocaleTimeString();
-        t = setTimeout(loop, 1000)
     }
-    loop();
+
+    let t = setInterval(loop, 1000);
 
     timeButton.addEventListener("click", function() {
-        clearTimeout(t);
+        clearInterval(t);
     });
 </script>
 </body>
