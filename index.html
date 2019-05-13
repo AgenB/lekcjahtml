@@ -9,12 +9,24 @@
     </style>
 </head>
 <body>
-    
+    <div class="time"></div>
+    <input type="button" class="button" value="Stop">
 <script>
-    czas = new Date();
-    czas.setDate(czas.getDate() + 1)
-    wakacje = new Date(2019,5,22,13);
-    console.log(wakacje.toLocaleTimeString());
+    let timeDiv = document.querySelector(".time");
+    let timeButton = document.querySelector(".button");
+
+    let t;
+
+    function loop() {
+        let time = new Date();
+        timeDiv.innerText = time.toLocaleTimeString();
+        t = setTimeout(loop, 1000)
+    }
+    loop();
+
+    timeButton.addEventListener("click", function() {
+        clearTimeout(t);
+    });
 </script>
 </body>
 </html>
