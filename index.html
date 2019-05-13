@@ -9,57 +9,12 @@
     </style>
 </head>
 <body>
-    <input type="text" id="a">
-    <input type="text" id="b">
-    <input type="text" id="c">
-    <input type="button" value="Uwtórz" id="create">
-    <br>
-    <input type="number" id="n">
-    <input type="button" value="Usuń" id="delete">
-    <ol id="list">
-
-    </ol>
+    
 <script>
-    const inputA = document.querySelector("#a");
-    const inputB = document.querySelector("#b");
-    const inputC = document.querySelector("#c");
-    const create = document.querySelector("#create");
-
-    const inputN = document.querySelector("#n");
-    const delBtn = document.querySelector("#delete");
-
-    const list = document.querySelector("#list");
-
-    function Animal(name, weight, age) {
-        this.name = name;
-        this.weight = weight;
-        this.age = age;
-        this.getDetails = function() {
-            return [this.name, this.weight, this.age];
-        }
-    }
-
-    function drawList(list, arr) {
-        list.innerHTML = "";
-        arr.map(function(item) {
-            let li = document.createElement("li");
-            let content = item.getDetails();
-            li.innerText = "Nazwa: " + content[0] + ", waga: " + content[1] + ", wiek: " + content[2];
-            list.appendChild(li);
-        });
-    }
-
-    let animalList = [];
-
-    create.addEventListener("click", function() {
-        animalList.push(new Animal(inputA.value, inputB.value, inputC.value));
-        drawList(list, animalList);
-    });
-
-    delBtn.addEventListener("click", function() {
-        animalList.splice(inputN.value - 1, 1);
-        drawList(list, animalList);
-    });
+    czas = new Date();
+    czas.setDate(czas.getDate() + 1)
+    wakacje = new Date(2019,5,22,13);
+    console.log(wakacje.toLocaleTimeString());
 </script>
 </body>
 </html>
