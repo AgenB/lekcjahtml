@@ -1,7 +1,10 @@
 body {
-    text-align: center;
+    /* text-align: center; */
 }
-.text {
-    width: 50%;
-    margin: auto;
+.obj {
+    display: inline-block;
+    margin: 0.1em;
+    background: red;
+    width: 2em;
+    height: 2em;
 }
