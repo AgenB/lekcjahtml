@@ -1,16 +1,25 @@
 $(document).ready(function() {
+    let tableRows = 5;
+    let tableCols = 5;
+    let cellId = 0;
     let table = document.createElement("table");
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < tableRows; i++) {
         let row = document.createElement("tr");
-        for (let y = 0; y < 5; y++) {
+        for (let y = 0; y < tableCols; y++) {
             let cell = document.createElement("td");
+            $(cell).attr("cellId", cellId);
             $(cell).css("border-color", "black");
             $(cell).mouseenter(function() {
-                $(cell).css("border-color", "red");
+                $(this).css("border-color", "red");
             });
             $(cell).mouseleave(function() {
-                $(cell).css("border-color", "black");
+                $(this).css("border-color", "black");
             });
+            $(cell).click(function() {
+                $(this).toggleClass("blue");
+                $("td[cellId='" + $(this).attr("cellId") + "']").toggleClass("blue");
+            });
+            cellId++
             row.appendChild(cell);
         }
         table.appendChild(row);
