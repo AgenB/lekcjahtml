@@ -1,8 +1,9 @@
 body {
 }
-.yellow {
-    background-color: yellow;
-}
-.red {
-    background-color: red;
+
+td {
+    border-style: solid;
+    border-width: small;
+    height: 20px;
+    width: 20px;
 }
