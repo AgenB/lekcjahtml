@@ -8,6 +8,7 @@ img {
     height: 200px;
     opacity: 0.5;
     /* filter: saturate(1000%) contrast(1000%); */
+    position: relative;
 }
 .desc {
     width: 600px;
