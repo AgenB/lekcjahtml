@@ -1,0 +1,13 @@
+img {
+    width: 15em;
+    transition: filter 0.2s;
+}
+.sharp {
+    filter: contrast(200%) saturate(200%);
+    transition: filter 0.2s;
+}
+.input, .addPic {
+    background: linear-gradient(to right, #ff8a00 0%, #da1b60 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

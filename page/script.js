@@ -1,17 +1,22 @@
 $(document).ready(function() {
-    $(".addFront").click(function() {
-        let li = document.createElement("li");
-        li.innerText = $(".input").val();
-        $("ol").prepend(li);
-    });
-    $(".addBack").click(function() {
-        let li = document.createElement("li");
-        li.innerText = $(".input").val();
-        $("ol").append(li);
-    });
-    $(".copy").click(function() {
-        $("li").each(function() {
-            $(this).text($(this).text() + " " + $(this).text().split(" ")[0]);
-        });
+    $(".list").on({
+        mouseenter: function() {
+            $(this).addClass("sharp");
+        },
+        mouseleave: function() {
+            $(this).removeClass("sharp");
+        }
+    }, "img")
+    $(".addPic").click(function() {
+        let pic = document.createElement("img");
+        pic.src = $(".input").val();
+        // $(pic).mouseenter(function() {
+        //     $(this).addClass("sharp");
+        // });
+        // $(pic).mouseleave(function() {
+        //     $(this).removeClass("sharp");
+        // });
+        
+        $(".list").append(pic);
     });
 });
