@@ -1,29 +1,17 @@
 $(document).ready(function() {
-    $("img").mouseenter(function() {
-        $(this).animate({opacity: "1"}, 10);
-        $(this).animate(
-            { top: "200px", left: "200px",deg: 36000 },
-            {
-            duration: 1200,
-            step: function(now) {
-                $(this).css({ transform: 'rotate(' + now + 'deg)' });
-            }
-            }
-        );
+    $(".addFront").click(function() {
+        let li = document.createElement("li");
+        li.innerText = $(".input").val();
+        $("ol").prepend(li);
     });
-    $("img").mouseleave(function() {
-        $(this).animate({opacity: "0.5"}, 10);
-        $(this).animate(
-            { top: 0, left: 0, deg: 0 },
-            {
-            duration: 1200,
-            step: function(now) {
-                $(this).css({ transform: 'rotate(' + now + 'deg)' });
-            }
-            }
-        );
+    $(".addBack").click(function() {
+        let li = document.createElement("li");
+        li.innerText = $(".input").val();
+        $("ol").append(li);
     });
-    $("img").click(function() {
-        $(this).nextSibling().fadeToggle();
+    $(".copy").click(function() {
+        $("li").each(function() {
+            $(this).text($(this).text() + " " + $(this).text().split(" ")[0]);
+        });
     });
 });
