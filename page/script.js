@@ -1,22 +1,19 @@
 $(document).ready(function() {
-    $(".list").on({
-        mouseenter: function() {
-            $(this).addClass("sharp");
-        },
-        mouseleave: function() {
-            $(this).removeClass("sharp");
-        }
-    }, "img")
-    $(".addPic").click(function() {
-        let pic = document.createElement("img");
-        pic.src = $(".input").val();
-        // $(pic).mouseenter(function() {
-        //     $(this).addClass("sharp");
-        // });
-        // $(pic).mouseleave(function() {
-        //     $(this).removeClass("sharp");
-        // });
-        
-        $(".list").append(pic);
+    $(document).mousemove(function(e) {
+        $(".parent").css({"left": e.pageX, "top": e.pageY});
+    });
+    $(document).click(function() {
+        $(".xhair").animate({
+            left: "-60px",
+            top: "-60px",
+            height: "120px",
+            width: "120px"
+        });
+        $(".xhair").animate({
+            left: "-50px",
+            top: "-50px",
+            height: "100px",
+            width: "100px"
+        });
     });
 });
