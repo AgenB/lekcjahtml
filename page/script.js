@@ -1,7 +1,8 @@
-$(document).ready(function() {
-    $(".input").change(function() {
-        $.get("test.php", {fruit: $(".input").val()}, function(data) {
-            $(".result").attr("src", data);
-        });
+$(document).ready(function(){
+    $(".input").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) == 0)
+      });
     });
-});
+  });

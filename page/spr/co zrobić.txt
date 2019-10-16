@@ -1,0 +1,5 @@
+imiona za pomocą ajaxa przyciski a-z, w animowany sposód pojawiają się
+po najechaniu na imie ma zmienić kolor w sposób animowany
+po kliknięciu ma zostać wyróżnione
+jak znowu sie kliknie ma wyróżnienie zniknąć
+po kliknięciu prawym ma doczepić się do wskaźnika i latać za myszką (kopia)

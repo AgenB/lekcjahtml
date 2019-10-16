@@ -1,0 +1,14 @@
+li {
+    position: relative;
+    left: 50px;
+}
+.hovered, .marked {
+    background: yellow;
+    transition: background 1s;
+}
+.snapped {
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0px;
+}
