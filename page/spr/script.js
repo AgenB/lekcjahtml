@@ -1,6 +1,6 @@
 $(document).ready(function() {
     let hasBeenRClicked = false;
-    let letters = "ABCDEFGHIJKLMNOUPRSTUVWXYZ";
+    let letters = "ABCDEFGHIJKLŁMNOUPRSTUVWXYZ";
     letters.split("").forEach(function(elem) {
         let button = document.createElement("button");
         $(button).text(elem);
