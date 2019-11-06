@@ -7,18 +7,92 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-12 order-sm-1 col-md-3 order-md-1 col-lg-2 order-lg-4 bg-primary">1</div>
-            <div class="col-md-9 col-lg-0 order-md-2 order-lg-10"></div>
-            <div class="col-12 col-sm-4 order-sm-2 col-md-3 offset-md-3 order-md-3 col-lg-2 order-lg-3 offset-lg-4 bg-success">2</div>
-            <div class="col-md-9 col-lg-0 order-md-4 order-lg-11"></div>
-            <div class="col-12 col-sm-4 order-sm-4 col-md-3 offset-md-9 order-md-7 col-lg-2 order-lg-2 offset-lg-0 bg-warning">3</div>
-            <div class="col-md-9 col-lg-0 order-md-6 order-lg-12"></div>
-            <div class="col-12 col-sm-4 order-sm-3 col-md-3 offset-md-6 order-md-5 col-lg-2 order-lg-1 offset-lg-0 bg-danger">4</div>
+            <div class="btn-group">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        OwOce
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Jabłko</a>
+                        <a class="dropdown-item" href="#">Banan</a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Samochody
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Opel</a>
+                        <a class="dropdown-item" href="#">Seat</a>
+                        <a class="dropdown-item" href="#">Toyota</a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Ubrania
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Spodnie</a>
+                        <a class="dropdown-item" href="#">Bluza</a>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="row">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://avatars3.githubusercontent.com/u/8634172?s=460&v=4" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Dawid Bejca</h4>
+                    <p class="card-text">2137</p>
+                    <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+            <div id="demo" class="carousel slide" data-ride="carousel" data-interval="1000">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                    <li data-target="#demo" data-slide-to="4"></li>
+                </ul>
+                
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img src="http://placezabaw-croquet.pl/2066-large_default/karuzela-hyzio-karuzele-km-0003qg.jpg" alt="Los Angeles">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://mojebambino.pl/66924-large_default/karuzela-z-kierownica.jpg" alt="Chicago">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX8CZMjT-UpiEl-acZLlbfLOoOQRuwRM-lIm42Vk6rUXMLE9PF&s" alt="New York">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://www.artbud.pl/environment/cache/images/500_500_productGfx_d762830090dd837f18d318f3494a98d2.jpg" alt="Los Angeles">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="https://kids-world.pl/wp-content/uploads/2018/05/lego-10257-creator-karuzela-3.jpg" alt="Los Angeles">
+                    </div>
+                </div>
+                
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                
+            </div>
     </div>
 <script src="script.js"></script>
 </body>

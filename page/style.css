@@ -1,5 +1,5 @@
 * {
-    text-align: center;
+    /* text-align: center; */
 }
 .one {
     background: green;
@@ -12,4 +12,9 @@
 }
 .four {
     background: yellow;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
